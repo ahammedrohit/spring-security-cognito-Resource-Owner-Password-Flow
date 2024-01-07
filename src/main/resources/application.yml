@@ -1,0 +1,28 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  port: 8080
+
+spring:
+  devtools:
+    livereload:
+      port: 35730
+  datasource:
+    primary:
+      hikari:
+        jdbcUrl: jdbc:postgresql://localhost:5432/cognito
+        username: postgres
+        password: admin
+        driverClassName: org.postgresql.Driver
+
+# AWS properties
+aws:
+  region: ap-northeast-1
+  cognito:
+    user-pool-id: ap-northeast-1_xxxxxxxxx
+    app-client-id: xxxxxxxxxxxxx
+    app-client-secret: xxxxxxxxxxxxx
